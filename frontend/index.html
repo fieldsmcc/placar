@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placar | FieldsApp</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="form-container">
+    <label for="placarLimite">Placar limite:</label>
+    <input type="number" id="placarLimite" min="1" required>
+    
+    <label for="nomesJogadores">Nomes dos jogadores (separados por vírgula, máx. 5):</label>
+    <input type="text" id="nomesJogadores" placeholder="Ex: João, Maria, Pedro">
+    
+    <button id="iniciarJogo" disabled>Iniciar Jogo</button>
+    <button id="verHistorico">Ver Histórico</button>
+  </div>
+
+  <table id="placarTabela" style="display: none;">
+    <thead>
+      <tr class="header-row">
+        <th colspan="22">PLACAR - FieldsApp</th>
+      </tr>
+      <tr id="rodadasHeader">
+        <th>JOGADOR</th>
+        <th>TOTAL</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="historico-container" style="display: none;">
+    <h2>Histórico de Partidas</h2>
+    <ul id="historicoLista"></ul>
+  </div>
+
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
